@@ -20,7 +20,7 @@
             <span class="imagen"><i class="fa-solid fa-clock-rotate-left"></i></span>
             <h2 class="titulo_tarjeta">Actividad Reciente: Últimas 24 Horas</h2>
             <p class="descripcion">Consulta los movimientos telúricos registrados en el último día a nivel global.</p>
-            <button class="boton" onclick="ActividadReciente()">Consultar</button>
+            <button class="boton" onclick="actividadReciente()">Consultar</button>
            
 
 
@@ -31,7 +31,7 @@
             <h2 class="titulo_tarjeta">Búsqueda por Magnitud Mínima</h2>
             <p class="descripcion">Ingresa una magnitud en el buscador para filtrar los sismos y visualizar únicamente aquellos que igualen o superen el valor indicado.</p>
             <input type="number" class="magnitud" id="input_magnitud">
-            <button class="boton" onclick="listarFestivos()">Consultar</button>
+            <button class="boton" onclick="buscarPorMagnitud()">Consultar</button>
 
         </div>
 
@@ -42,7 +42,7 @@
             <p class="descripcion">Selecciona una fecha de inicio y una fecha de fin para explorar el catálogo histórico de sismos ocurridos durante ese periodo específico.</p>
             <input type="date" id="input_inicio" >
             <input type="date" id="input_final">
-            <button class="boton" onclick="listarFestivos()">Consultar</button>
+            <button class="boton" onclick="buscarPorRango()">Consultar</button>
 
         </div>
     

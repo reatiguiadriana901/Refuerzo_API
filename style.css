@@ -92,3 +92,30 @@ input {
     border-radius: 12px;
     padding: 1.25rem;
 }
+
+.resultados {
+    margin: 0 2rem 2rem;
+    padding: 1.25rem;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #dde3ea;
+}
+
+.sismos {
+    padding: 12px;
+    border-left: 4px solid #378ADD;
+    background: #f0f4f8;
+    margin-bottom: 12px;
+    border-radius: 8px;
+}
+
+.sismos h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.sismos p {
+    font-size: 13px;
+    color: #555;
+}
