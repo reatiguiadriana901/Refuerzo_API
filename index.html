@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sismos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body class="general">
+
+    <section class="titulo_contenedor">
+        <h1 class="titulo">Tu Reporte Sísmico</h1>
+    </section>
+
+    <section class="contenedor_tarjetas">
+
+        <div class="tarjeta_reciente">
+            <span class="imagen"><i class="fa-solid fa-clock-rotate-left"></i></span>
+            <h2 class="titulo_tarjeta">Actividad Reciente: Últimas 24 Horas</h2>
+            <p class="descripcion">Consulta los movimientos telúricos registrados en el último día a nivel global.</p>
+            <button class="boton" onclick="ActividadReciente()">Consultar</button>
+           
+
+
+        </div>
+
+        <div class="tarjeta_magnitud">
+            <span class="imagen"><i class="fa-solid fa-filter"></i></span>
+            <h2 class="titulo_tarjeta">Búsqueda por Magnitud Mínima</h2>
+            <p class="descripcion">Ingresa una magnitud en el buscador para filtrar los sismos y visualizar únicamente aquellos que igualen o superen el valor indicado.</p>
+            <input type="number" class="magnitud" id="input_magnitud">
+            <button class="boton" onclick="listarFestivos()">Consultar</button>
+
+        </div>
+
+        <div class="rango">
+
+            <span class="imagen"><i class="fa-solid fa-calendar-days"></i></span>
+            <h2 class="titulo_tarjeta">Historial Sísmico por rango de fechas</h2>
+            <p class="descripcion">Selecciona una fecha de inicio y una fecha de fin para explorar el catálogo histórico de sismos ocurridos durante ese periodo específico.</p>
+            <input type="date" id="input_inicio" >
+            <input type="date" id="input_final">
+            <button class="boton" onclick="listarFestivos()">Consultar</button>
+
+        </div>
+    
+
+    </section>
+
+
+    <section class="resultados"></section>
+
+
+
+
+
+<script src="script.js"></script>
+    
+</body>
+</html>

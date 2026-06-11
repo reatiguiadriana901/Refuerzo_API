@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f4f8;
+    color: #222;
+    min-height: 100vh;
+}
+
+.titulo_contenedor {
+    padding: 2.5rem 2rem 1.5rem;
+    text-align: center;
+}
+
+.titulo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.contenedor_tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    padding: 0 2rem 2rem;
+}
+
+.tarjeta_reciente,
+.tarjeta_magnitud,
+.rango {
+    background: white;
+    border: 1px solid #dde3ea;
+    border-radius: 12px;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.imagen {
+    font-size: 24px;
+    color: #378ADD;
+}
+
+.titulo_tarjeta {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.descripcion {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.6;
+}
+
+label {
+    font-size: 12px;
+    color: #888;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+input {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #dde3ea;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.boton {
+    margin-top: auto;
+    padding: 9px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: transparent;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background: #f0f4f8;
+}
+
+.resultados {
+    margin: 0 2rem 2rem;
+    background: white;
+    border: 1px solid #dde3ea;
+    border-radius: 12px;
+    padding: 1.25rem;
+}
