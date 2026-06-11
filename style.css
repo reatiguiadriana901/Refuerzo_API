@@ -6,7 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: #f0f4f8;
+    background: #ddcdf7;
     color: #222;
     min-height: 100vh;
 }
@@ -31,7 +31,7 @@ body {
 .tarjeta_reciente,
 .tarjeta_magnitud,
 .rango {
-    background: white;
+    background: rgb(201, 239, 211);
     border: 1px solid #dde3ea;
     border-radius: 12px;
     padding: 1.25rem;
@@ -103,8 +103,8 @@ input {
 
 .sismos {
     padding: 12px;
-    border-left: 4px solid #378ADD;
-    background: #f0f4f8;
+    border-left: 4px solid #afd6fe;
+    background: #89bef4;
     margin-bottom: 12px;
     border-radius: 8px;
 }

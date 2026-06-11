@@ -25,9 +25,15 @@ async function actividadReciente() {
 }
 
 function mostrarResultados(datos){
-    
+
     console.log(datos.features)
     const resultado = document.querySelector(".resultados");
+
+    if(datos.features.length === 0){
+    resultado.innerHTML = "<p>No se encontraron datos de sismos</p>";
+    return;
+    }
+
     resultado.innerHTML = datos.features.map(feature => `
     <div class="sismos">
         <h3>${feature.properties.mag}</h3>
@@ -35,6 +41,7 @@ function mostrarResultados(datos){
         <p>${new Date(feature.properties.time).toLocaleDateString()}</p>
 
     </div>
+    
 `).join("");
     
 }
@@ -42,6 +49,12 @@ function mostrarResultados(datos){
 async function buscarPorMagnitud(param) {
 
     const magnitud = document.getElementById("input_magnitud").value
+
+    if(!magnitud){
+    mostrarError("Debe ingresar una magnitud");
+    return;
+    }
+
 
     let endpoint = `?format=geojson&minmagnitude=${magnitud}`
 
@@ -55,10 +68,20 @@ async function buscarPorRango(rango){
     const inicio = document.getElementById("input_inicio").value;
     const final = document.getElementById("input_final").value;
 
+    if(!inicio || !final ){
+    mostrarError("Debe ingresar las fechas");
+    return;
+    }
+
     let endpoint = `?format=geojson&starttime=${inicio}&endtime=${final}`;
 
     const datos = await consumirAPI(endpoint);
 
     mostrarResultados(datos)
 
+}
+
+function mostrarError(mensaje){
+    const resultado = document.querySelector(".resultados");
+    resultado.innerHTML = `<p class="error">${mensaje}</p>`;
 }
